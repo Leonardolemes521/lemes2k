@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso de Mecânica Automotiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset básico e fonte */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: #0a0a0a;
+      color: #ffffff;
+    }
+
+    header {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+header img {
+  height: 90px;
+  position: absolute;
+  left: 280px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header div {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+}
+
+    /* Seções */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Títulos h2 */
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: #edf0f5;
+    }
+
+    /* Botões */
+    .btn {
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1565c0;
+    }
+
+    /* Grid flexível */
+    .grid, .benefit-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Benefits */
+    .benefits {
+      background-color: #0a0a0a;
+      padding: 40px 20px;
+    }
+
+    .benefit-item {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px 10px;
+      width: 200px;
+      color: #ff4444;
+      box-shadow: 0 0 10px #0a0a0a;
+      text-align: center;
+    }
+
+    .benefit-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+
+    .benefit-item p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* Cards dos módulos */
+    .card {
+      background: rgb(9, 187, 92);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 300px;
+      color: #eceaee;
+      text-align: left;
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+    }
+
+    /* Imagens nas seções */
+    section img {
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Vídeo seção */
+    .video-section {
+      background: linear-gradient(135deg, #0d47a1, #1565c0);
+      padding: 40px 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 40px auto;
+      box-shadow: 0 8px 20px rgba(13, 71, 161, 0.6);
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #edf0f5;
+    }
+
+    .video-section iframe {
+      display: inline-block;
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+      border: none;
+      transition: transform 0.3s ease;
+    }
+
+    .video-section iframe:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #a10d0d;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    /* Botão flutuante WhatsApp */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128c3e;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header div {
+        max-width: 100%;
+      }
+
+      .grid, .benefit-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        max-width: 90%;
+      }
+
+      .video-section iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo da Loja" />
+    <div>
+      <h1>Curso de Mecânica Online</h1>
+      <p>Aprenda, ganhe dinheiro e transforme seu futuro!</p>
+    </div>
+  </header>
+      
+  <section class="benefits">
+    <h2>Sobre o Curso 🥇🎓:</h2>
+    <div class="benefit-grid">
+      <div class="benefit-item">
+        <img src="icone-curso-online.png" alt="Curso 100% online">
+        <p>Curso 100% online</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icone-video-aulas.png" alt="60 vídeo aulas otimizadas">
+        <p>+60 vídeo aulas otimizadas</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icone-relogio.png" alt="Conteúdo sem enrolação">
+        <p>+4h de conteúdo sem enrolação</p>
+      </div>
+      <div class="benefit-item">
+        <img src="icone-cadeado.png" alt="Acesso vitalício">
+        <p>Acesso vitalício ao curso</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modulos">
+    <h2>O Que Você Vai Aprender 🧠👨‍🎓👩‍🎓</h2>
+    <div class="grid">
+      <div class="card">
+        <h4>Injeção Eletrônica</h4>
+        <p>Como diagnosticar falhas e fazer manutenção com scanner automotivo.</p>
+      </div>
+      <div class="card">
+        <h4>Manutenção Preventiva</h4>
+        <p>Checklist completo de peças, fluidos e ferramentas.</p>
+      </div>
+      <div class="card">
+        <h4>Empreendedorismo</h4>
+        <p>Como ganhar dinheiro com mecânica e montar sua própria oficina.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>INTRODUÇÃO 😍🛠️🚗</h2>
+    <iframe
+      src="https://www.youtube.com/embed/Ul1XuiJE0Dw"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      title="Vídeo de Introdução ao Curso"
+    ></iframe>
+  </section>
+
+  <section>
+    <h2>Aprenda na prática 💡💪</h2>   
+    <img src="imagem1.jpeg" alt="Aula prática de mecânica com jovens estudando motores">
+  </section>
+
+  <section>
+    <h2>Prepare-se para o mercado de trabalho 🎯🏆</h2>
+    <img src="imagem2.jpeg" alt="Mecânicos trabalhando em oficina com foco e atenção">
+  </section>
+
+  <section id="contato">
+    <h2>Como ganhar dinheiro com mecânica 🛠️🚗</h2>
+    <img src="imagem3.jpeg" alt="Dinheiro e motor, como lucrar com mecânica">
+  </section>
+
+  <footer>
+    &copy; 2025 Curso de Mecânica Online. Todos os direitos reservados.
+  </footer>
+
+  <a class="whatsapp-btn" href="https://wa.me/+5567981424333" target="_blank" rel="noopener noreferrer">
+    Chame no WhatsApp
+  </a>
+
+</body>
+</html>
