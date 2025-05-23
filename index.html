@@ -226,33 +226,70 @@ header p {
       background-color: #128c3e;
     }
     @media (max-width: 768px) {
+  /* Header com grid 2x2 */
   header {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-    grid-template-rows: auto auto;        /* 2 linhas */
-    gap: 10px;                            /* espaço entre itens */
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: auto auto;         /* 2 linhas */
+    gap: 10px;
     text-align: center;
+    padding: 15px 10px;
+    position: relative; /* mantém o posicionamento do logo */
+  }
+
+  header img {
+    position: static; /* Remove position absolute para facilitar o layout */
+    margin: 0 auto;
+    height: 80px;
+    grid-column: 1 / 2; /* ocupa a primeira coluna */
+    grid-row: 1 / 2;
+    justify-self: center;
   }
 
   header div {
     max-width: 100%;
+    grid-column: 2 / 3; /* ocupa a segunda coluna */
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
   }
 
-  .grid, .benefit-grid {
+  /* Benefit grid com 2 colunas x 2 linhas */
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .benefit-item {
+    width: 100%; /* ocupa toda célula do grid */
+    max-width: 180px;
+  }
+
+  /* Grid dos cards módulos vira coluna única */
+  .grid {
     flex-direction: column;
     align-items: center;
   }
 
   .card {
     max-width: 90%;
+    margin-bottom: 20px;
   }
 
+  /* Vídeo com altura menor */
+  .video-section iframe {
+    height: 250px;
+  }
 
+  /* Ajustes para imagens das seções */
+  section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
-      .video-section iframe {
-        height: 300px;
-      }
-    }
   </style>
 </head>
 <body>
