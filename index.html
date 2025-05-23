@@ -225,11 +225,12 @@ header p {
     .whatsapp-btn:hover {
       background-color: #128c3e;
     }
-
-    /* Responsividade */
     @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+    grid-template-rows: auto auto;        /* 2 linhas */
+    gap: 10px;                            /* espaço entre itens */
     text-align: center;
   }
 
@@ -237,23 +238,21 @@ header p {
     max-width: 100%;
   }
 
-  /* Aqui começa a alteração para 2x2 */
   .grid, .benefit-grid {
-    flex-wrap: wrap;       /* Permite quebrar linha */
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .card, .benefit-item {
-    flex: 1 1 45%;         /* Cada item ocupa cerca de 45% da largura */
-    max-width: 45%;        /* Limita largura máxima para criar 2 colunas */
+  .card {
+    max-width: 90%;
   }
-  /* Fim da alteração */
 
-  .video-section iframe {
-    height: 300px;
-  }
-}
 
+
+      .video-section iframe {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
