@@ -227,6 +227,43 @@ header p {
     }
     @media (max-width: 768px) {
   /* Header com grid 2x2 */
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d47a1;
+    padding: 15px 10px;
+    position: relative;
+    max-width: 100%;   /* Evita que o cabeçalho fique muito largo */
+    margin: 0 auto;
+  }
+
+  header img {
+    position: relative; /* tiramos absolute */
+    height: 60px; /* menor que antes */
+    margin-right: 15px; /* espaçamento para o texto */
+    flex-shrink: 0;
+  }
+
+  header div {
+    flex: 1;
+    text-align: center;
+    max-width: calc(100% - 75px); /* deixa espaço para o logo */
+  }
+
+  header h1 {
+    font-size: 1.4rem; /* menor no celular */
+    margin: 0;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin: 4px 0 0;
+  }
+
+
+
   header {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
